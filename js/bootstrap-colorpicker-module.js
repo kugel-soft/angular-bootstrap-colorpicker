@@ -529,7 +529,7 @@ angular.module('colorpicker.module', [])
 
               if (attrs.colorpickerIsOpen) {
                 $scope[attrs.colorpickerIsOpen] = true;
-                if (!$scope.$$phase || !$scope.$root.$$phase) {
+                if (!$scope.$$phase && !$scope.$root.$$phase) {
                   $scope.$digest(); //trigger the watcher to fire
                 }
               }
@@ -565,7 +565,7 @@ angular.module('colorpicker.module', [])
 
               if (attrs.colorpickerIsOpen) {
                 $scope[attrs.colorpickerIsOpen] = false;
-                if (!$scope.$$phase || !$scope.$root.$$phase) {
+                if (!$scope.$$phase && !$scope.$root.$$phase) {
                   $scope.$digest(); //trigger the watcher to fire
                 }
               }
