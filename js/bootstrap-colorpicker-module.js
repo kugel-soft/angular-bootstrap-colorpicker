@@ -406,6 +406,10 @@ angular.module('colorpicker.module', [])
           elem.on('$destroy', function() {
             colorpickerTemplate.remove();
           });
+          
+          $scope.$on('$destroy', function () {
+            colorpickerTemplate.remove();
+          });
 
           function previewColor() {
             try {
